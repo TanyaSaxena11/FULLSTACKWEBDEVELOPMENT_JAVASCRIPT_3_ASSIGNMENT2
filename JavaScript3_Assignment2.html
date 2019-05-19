@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>JavaScript3_functions and callbacks</title>
+    </head>
+    <body>
+        <script>
+            var itemToBePrepared = ['Burger', 'Pasta','cake']; 
+            function prepareFood(Tablenumber,Items,callback){
+                var num = Tablenumber;
+                 var itemToBeServed = Items;
+                 console.log('Preparing food for items - ' , itemToBeServed);
+                 callback(num,itemToBeServed);
+            }
+            function serveFood(Tablenumber,items){
+                
+                console.log('Serving food for items - ' , items);
+            }
+
+            prepareFood(21,itemToBePrepared,serveFood);
+        </script>
+    </body>
+</html>
